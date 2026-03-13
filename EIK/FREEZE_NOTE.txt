@@ -1,0 +1,97 @@
+EIK FREEZE NOTE
+
+Release:
+Shunyaya Execution Identity Kernel (EIK) v1
+
+Purpose:
+This release freezes the minimal public demonstration boundary for EIK.
+
+Core claim:
+EIK demonstrates deterministic execution identity.
+
+The governing behavior is:
+
+same observable boundary -> same execution certificate
+changed observable boundary -> changed execution certificate
+restored observable boundary -> restored execution certificate
+
+Execution identity model:
+
+B = (target_sha256, argv, stdin_text, stdout_text, stderr_text, exit_code)
+
+E = SHA256(JSON_canonical(B))
+
+Where:
+
+B represents the observable execution boundary.
+E represents the deterministic execution certificate produced by the kernel.
+
+Frozen boundary:
+
+eik.py
+
+eik.cmd
+
+RUN_EIK.cmd
+
+REPLAY_EIK.cmd
+
+VERIFY_EIK.cmd
+
+RUN_ALL_TESTS.cmd
+
+run_eik.sh
+
+replay_eik.sh
+
+verify_eik.sh
+
+run_all_tests.sh
+
+examples\
+
+outputs_example\
+
+FREEZE_NOTE.txt
+
+Editable outside frozen boundary:
+
+README
+
+docs\
+
+explanatory materials
+
+release notes
+
+Meaning of freeze:
+
+Any modification inside the frozen boundary requires:
+
+regeneration of outputs_example
+
+re-running verification
+
+confirming replay and mutation behavior
+
+updating this freeze note if the boundary definition changes
+
+Scope of certification:
+
+EIK certifies structural execution identity only.
+
+EIK does not certify:
+
+algorithm correctness
+
+domain validity
+
+safety
+
+optimization quality
+
+performance superiority
+
+full hermetic environment reproducibility
+
+This freeze preserves a minimal, replay-verifiable public demonstration of deterministic execution identity.
