@@ -1,0 +1,197 @@
+Open Standard License — Shunyaya Execution Identity Kernel (EIK)
+
+Shunyaya Execution Identity Kernel (EIK)
+Deterministic Execution Identity Certification Standard
+
+Permission
+
+Permission is hereby granted, free of charge, to any person or organization to use, execute, reproduce, publish, distribute, reference, extend, modify, or incorporate the Shunyaya Execution Identity Kernel (EIK) methodology, documentation, and reference implementations, in whole or in part, without restriction.
+
+This permission applies to both commercial and non-commercial use.
+
+No registration required.
+No fees required.
+No approval required.
+
+No Restrictions
+
+This Open Standard imposes no legal, technical, or commercial restrictions on use or implementation of the EIK methodology.
+
+Attribution is not required.
+No endorsement is implied.
+No runtime obligations apply.
+No implementation approval is required.
+
+Correctness and conformance are governed exclusively by:
+
+• deterministic execution
+• execution boundary identity
+• replay identity discipline
+
+—not by licensing terms.
+
+Modified or extended versions must not be represented as the canonical EIK Standard unless they preserve the deterministic execution identity discipline defined herein.
+
+Recommended Attribution (Optional)
+
+Attribution is recommended but not required.
+
+Preferred form:
+
+Implements the Shunyaya Execution Identity Kernel (EIK) methodology.
+
+Attribution must not imply:
+
+• endorsement
+• certification authority
+• governance authority
+• authorship by the original authors
+
+Trademark and Naming
+
+This license does not grant any trademark rights.
+
+Use of the names:
+
+• Shunyaya Execution Identity Kernel (EIK)
+• Shunyaya Structural Universal Mathematics (SSUM)
+
+must not imply:
+
+• endorsement
+• certification authority
+• official compliance approval
+• governance authority
+• authorship by the original authors
+
+Scope of the EIK Standard
+
+The Shunyaya Execution Identity Kernel (EIK) defines a deterministic methodology for producing execution identity certificates representing the observable boundary of a program execution.
+
+An execution identity certificate represents a canonical structural fingerprint of the execution boundary.
+
+Conceptually:
+
+E = Φ(P, I, O)
+
+Where:
+
+P = program
+I = inputs
+O = outputs
+
+The certificate is produced by canonicalizing the execution boundary and generating a deterministic cryptographic hash.
+
+Conceptually:
+
+Φ(P,I,O) = SHA256(JSON_canonical(B))
+
+Where:
+
+B = (
+  program_hash,
+  argv,
+  stdin,
+  stdout,
+  stderr,
+  exit_code
+)
+
+This hash becomes the execution identity certificate.
+
+Deterministic Identity Discipline
+
+The EIK methodology follows three deterministic rules.
+
+Replay Identity
+same execution boundary → same certificate
+
+Mutation Sensitivity
+changed execution boundary → changed certificate
+
+Restoration Identity
+restored boundary → restored certificate
+
+These rules define deterministic execution identity.
+
+What EIK Does NOT Do
+
+The EIK standard does not:
+
+• modify classical computation
+• alter algorithm outputs
+• introduce probabilistic inference
+• perform machine learning
+• inject predictive models
+• simulate future behavior
+• introduce randomness
+• alter execution semantics
+
+It provides deterministic execution identity certification only.
+
+Conformance
+
+An implementation conforms to the EIK Standard if it:
+
+• executes deterministically
+• captures observable execution boundaries
+• canonicalizes the execution boundary deterministically
+• produces stable identity certificates for identical boundaries
+• produces different certificates when boundaries differ
+
+Any implementation introducing:
+
+• randomness
+• probabilistic inference
+• nondeterministic output ordering
+• hidden state mutation
+• tolerance-based comparison
+• adaptive runtime mutation
+
+does not conform to the deterministic EIK standard.
+
+Independent implementations are permitted and encouraged.
+
+Relationship to Other Licenses
+
+This Open Standard applies to the EIK methodology and execution identity discipline.
+
+Reference implementations, example scripts, datasets, tooling, or supporting libraries may be released under separate licenses if explicitly stated.
+
+Implementation licensing does not alter deterministic conformance requirements of this Standard.
+
+Responsibility
+
+Use of the Shunyaya Execution Identity Kernel (EIK) in software systems, infrastructure, research, governance, or operational environments is undertaken entirely at the user's own responsibility.
+
+The EIK Standard provides:
+
+• deterministic execution identity certification
+• replay-verifiable execution fingerprints
+• structural identity observation
+
+It does not provide:
+
+• operational authority
+• regulatory certification
+• security guarantees
+• safety guarantees
+• compliance approval
+
+No Warranty
+
+THE EIK STANDARD IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE USE OF THIS STANDARD.
+
+Closing Statement
+
+The Shunyaya Execution Identity Kernel (EIK) is published as an open deterministic standard for producing replay-verifiable execution identity certificates.
+
+Its authority is governed by:
+
+execution
+boundary identity
+deterministic replay
+
+—not by permission.
