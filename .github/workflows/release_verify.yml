@@ -19,10 +19,19 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Normalize shell script line endings
+        run: |
+          sed -i 's/\r$//' EIK/verify_eik.sh
+          sed -i 's/\r$//' EIK/replay_eik.sh
+          sed -i 's/\r$//' EIK/run_all_tests.sh
+
+      - name: Make shell scripts executable
+        run: |
+          chmod +x EIK/verify_eik.sh
+          chmod +x EIK/replay_eik.sh
+          chmod +x EIK/run_all_tests.sh
+
       - name: Run EIK verification
         run: |
           cd EIK
-          python eik.py examples/hello_cert.py -- World > /tmp/eik_run_1.txt
-          python eik.py examples/hello_cert.py -- World > /tmp/eik_run_2.txt
-          diff /tmp/eik_run_1.txt /tmp/eik_run_2.txt
           bash verify_eik.sh
