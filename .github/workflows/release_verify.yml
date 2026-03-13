@@ -12,17 +12,17 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
-
-      - name: Make verification script executable
-        run: chmod +x EIK/verify_eik.sh
 
       - name: Run EIK verification
         run: |
           cd EIK
+          python eik.py examples/hello_cert.py -- World > /tmp/eik_run_1.txt
+          python eik.py examples/hello_cert.py -- World > /tmp/eik_run_2.txt
+          diff /tmp/eik_run_1.txt /tmp/eik_run_2.txt
           bash verify_eik.sh
