@@ -2,6 +2,8 @@
 
 A **~1 KB deterministic kernel** that certifies **execution identity** in seconds.
 
+[![Release Verification](https://github.com/OMPSHUNYAYA/Execution-Identity-Kernel/actions/workflows/release_verify.yml/badge.svg)](https://github.com/OMPSHUNYAYA/Execution-Identity-Kernel/actions/workflows/release_verify.yml)
+
 ![Shunyaya](https://img.shields.io/badge/Shunyaya-Execution%20Identity%20Kernel-black)
 ![Deterministic](https://img.shields.io/badge/Deterministic-Yes-green)
 ![Replay--Identity](https://img.shields.io/badge/Replay%20Identity-B_A%20%3D%20B_B-brightgreen)
