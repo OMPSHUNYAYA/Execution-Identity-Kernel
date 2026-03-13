@@ -155,7 +155,7 @@ Further execution boundary clarifications and edge cases are explained in:
 
 Explore the main project components:
 
-`EIK` • `EIK/examples` • `EIK/outputs_example` • `docs`
+[`EIK`](EIK/) • [`examples`](EIK/examples/) • [`outputs_example`](EIK/outputs_example/) • [`docs`](docs/)
 
 ---
 
@@ -181,7 +181,7 @@ Verification confirms:
 
 ### 📜 License
 
-`LICENSE`
+[`LICENSE`](LICENSE)
 
 ---
 
